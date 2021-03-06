@@ -1,0 +1,5 @@
+lapora_kriteria : 
+CREATE VIEW laporan_kriteria AS SELECT kriteria.kode, kelompok_kriteria.nama, kriteria.keterangan, nilai_kriteria.md, nilai_kriteria.mb FROM kriteria INNER JOIN kelompok_kriteria ON kriteria.id_kelompok=kelompok_kriteria.id_kelompok JOIN nilai_kriteria ON nilai_kriteria.kriteria_id=kriteria.id_kriteria
+
+laporan_solusi :
+SELECT solusi.kode, solusi.keterangan, solusi.status, nilai_kriteria.kriteria_id FROM solusi INNER JOIN nilai_kriteria ON nilai_kriteria.solusi_id=solusi.id_solusi
